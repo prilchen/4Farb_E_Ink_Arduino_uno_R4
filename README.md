@@ -5,6 +5,8 @@ Dieses Repository enthält den Beispielcode und die Konfiguration für den Betri
 
 Als Controller kommt der **Arduino R4 WiFi** (Renesas RA4M1 Architektur) zum Einsatz. Die Entwicklung erfolgt in **Visual Studio Code (VS Code)** mit der Erweiterung **PlatformIO (PIO)**.
 
+![Projektbild](images/4farbeink2.jpg)
+
 ## 🚀 Die Anforderung
 
 Der Betrieb dieses speziellen Displays am Arduino R4 WiFi bringt zwei technische Besonderheiten mit sich, die in diesem Code gelöst sind:
