@@ -4,7 +4,7 @@
 #include "EPD_1in54g.h"
 #include "GUI_Paint.h"
 
-// Wir bleiben bei 200x200, da der Controller diese Datenmenge erwartet
+// Auflösung 200x200
 #undef EPD_1IN54G_WIDTH
 #define EPD_1IN54G_WIDTH 200
 #undef EPD_1IN54G_HEIGHT
@@ -37,7 +37,7 @@ void setup() {
     Paint_NewImage(ImageBuffer, EPD_1IN54G_WIDTH, EPD_1IN54G_HEIGHT, 0, EPD_1IN54G_WHITE);
     
     // 2. WICHTIG: Scale auf 4 setzen (aktiviert den 2-Bit Modus / 4 Farben)
-    // Wenn dieser Befehl fehlt, hast du den "Echo-Effekt" aus deinen Fotos!
+    
     Paint_SetScale(4); 
     
     Paint_SelectImage(ImageBuffer);
@@ -45,7 +45,7 @@ void setup() {
     
     // 3. Jetzt zeichnen (Die Farben 0-3 nutzen)
     // 0: Schwarz, 1: Weiß, 2: Gelb, 3: Rot (oder ähnlich, je nach Panel)
-    Paint_DrawString_EN(10, 20, "PRILCHEN.DE", &Font16, 1, 0); // Hintergrund 1, Text 0
+    Paint_DrawString_EN(10, 20, "PRILCHEN.DE", &Font24, 0, 1); // Hintergrund 1, Text 0
     
     // Teste die Farben direkt mit Zahlenwerten 0, 2, 3
     Paint_DrawRectangle(10, 50, 60, 100, 3, DOT_PIXEL_1X1, DRAW_FILL_FULL); // Farbe 3 (Rot?)
