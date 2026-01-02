@@ -13,7 +13,7 @@
 void setup() {
     Serial.begin(115200);
     delay(2000);
-    Serial.println(">>> 4-FARBEN RETTUNGSMODUS <<<");
+    Serial.println(">>> 4-FARBEN MODUS <<<");
 
     DEV_Module_Init();
     
