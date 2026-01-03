@@ -11,7 +11,7 @@ Als Controller kommt der **Arduino R4 WiFi** (Renesas RA4M1 Architektur) zum Ein
 
 Der Betrieb dieses speziellen Displays am Arduino R4 WiFi bringt zwei technische Besonderheiten mit sich, die in diesem Code gelöst sind:
 
-1. **Auflösungs-Mapping:** Obwohl das Panel physisch 152x152 Pixel groß ist, erwartet der verbaute Controller eine Adressierung von **200x200 Pixeln**.
+1. **Auflösungs-Mapping:** Ging anfangs davon aus das das Panel physisch 152x152 Pixel groß ist, erwartet der verbaute Controller doch eine Adressierung von **200x200 Pixeln**.
 2. **Farbtiefe (2-Bit):** Im Gegensatz zu herkömmlichen Schwarz-Weiß-Displays (1-Bit) benötigt dieses Modell 2 Bits pro Pixel, um vier Farben darzustellen. Dies erfordert eine spezielle Pufferberechnung und die Nutzung der `Paint_SetScale(4)` Funktion.
 
 ## 🛠 Hardware-Anforderungen
@@ -24,7 +24,7 @@ Der Betrieb dieses speziellen Displays am Arduino R4 WiFi bringt zwei technische
 
 | Display-Pin | Arduino R4 WiFi | Beschreibung |
 | --- | --- | --- |
-| **VCC** | 5V | Stromversorgung (Dank Rev 2.1 inkl. Spannungsregler) |
+| **VCC** | 3,3V oder 5V | Stromversorgung (Dank Rev 2.1 inkl. Spannungsregler) |
 | **GND** | GND | Masse |
 | **DIN** | D11 (COPI) | Controller Out Peripheral In (Datenleitung) |
 | **CLK** | D13 (SCK) | Serial Clock (Taktleitung) |
@@ -62,9 +62,9 @@ monitor_speed = 115200
 
 ---
 
-Betrieben von 🌐 [prilchen.de](https://prilchen.de)
+🌐 Weitere Details [prilchen.de]([https://prilchen.de](https://prilchen.de/arduino-projekt-ein-4-farben-e-paper-am-arduino-r4-wifi/))
 
 📺 [YouTube @prilchen](https://www.youtube.com/@prilchen)
 
-🐙 [GitHub @prilchen](https://github.com/prilchen)
+
 
